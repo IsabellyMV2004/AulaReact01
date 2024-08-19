@@ -1,26 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import Data from "./meusComponentes/Data";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          {'Data/hora em que a pagina foi carregada:' + new Date().toLocaleDateString() + ' ' + new Date().toLocaleString()}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Data texto="Data e hora atuais: " timeZone="-3.00"/>
+        <Data texto="Data e hora em Londres: " timeZone="1.00"/>
+        <Data texto="Data e hora em Nova York: " timeZone="-4.00"/>
+        
     </div>
   );
 }
